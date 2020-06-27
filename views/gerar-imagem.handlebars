@@ -1,0 +1,61 @@
+<h1>Gerar Imagem</h1>
+<span>Hash: <b>{{hash}}</b></span> <br><br>
+
+<div class="canvas__container">
+<canvas id="myCanvas" width="100" height="100"></canvas>
+  <img src="" id="mirror" />
+</div>
+
+<br>
+<a href="/#" class="button" id="btn-download" download="pulso.jpg">Download</a>
+
+
+<script src="/js/piexif.js"> </script>
+<script type="text/javascript">
+
+
+  var cnvs = document.getElementById('myCanvas'),
+      ctx = cnvs.getContext('2d'),
+      mirror = document.getElementById('mirror');
+
+  var dataURL2;
+//Exif write
+  function writeexif (file) {
+  var zeroth = {};
+  zeroth[piexif.ImageIFD.Make] = '{{hash}}';
+  var exifObj = {"0th":zeroth};
+  var exifStr = piexif.dump(exifObj);
+  dataURL2 = piexif.insert(exifStr, file)
+}
+
+//Desenha A Imagem  
+  ctx.beginPath();
+  for (var i = 0; i < 5; i++) {
+  ctx.fillStyle = 'rgb(255, 165, 0)';
+  ctx.rect(0 + (10 * i), 0, 10, 10);
+  if (Math.random() >= 0.5){ctx.fill();}
+  ctx.rect(0 + (10 * i), 10, 10, 10);
+  if (Math.random() >= 0.8){ctx.fill();}
+  ctx.rect(0 + (10 * i), 20, 10, 10);
+  if (Math.random() >= 0.9){ctx.fill();}
+  ctx.rect(0 + (10 * i), 30, 10, 10);
+  if (Math.random() >= 0.8){ctx.fill();}
+  ctx.rect(0 + (10 * i), 40, 10, 10);
+  if (Math.random() >= 0.9){ctx.fill();}
+
+  }
+
+  cnvs.style.display="none";
+
+//Download da Imagem
+   var dataURL = cnvs.toDataURL('image/jpeg');
+   mirror.src = dataURL;
+
+  var button = document.getElementById('btn-download');
+  button.addEventListener('click', function (e) {
+      var dataURL = cnvs.toDataURL('image/jpeg');
+      writeexif(dataURL);
+      button.href = dataURL2;
+  });
+
+</script>

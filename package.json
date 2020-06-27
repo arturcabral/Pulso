@@ -1,0 +1,23 @@
+{
+  "name": "pulso",
+  "version": "1.0.0",
+  "description": "servidor express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "pulse"
+  ],
+  "author": "Artur Cabral",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "handlebars": "^4.7.6",
+    "node-fetch": "^2.6.0",
+    "piexifjs": "^1.0.4"
+  }
+}
