@@ -38,7 +38,7 @@ router.get('/ler-imagem',function(req,res){
 });
 
 router.get('/teste',function(req,res){
-  //res.render('teste', { name: name});
+  res.render('analise-final');
 });
 
 //Rota formulário
