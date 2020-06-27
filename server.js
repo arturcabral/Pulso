@@ -82,8 +82,11 @@ router.get('/gerar-imagem',function(req,res){
   ler(id, res);
 });
 
+var porta = process.env.PORT || 8080;
+
+
 //add the router
 app.use('/', router);
-app.listen(process.env.port || 8080);
+app.listen(porta);
 
 console.log('Running at Port 8080');
