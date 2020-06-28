@@ -25,12 +25,14 @@ function showData(result, dado, res) {
   
     if(trueHash) { 
       //console.log("TEM HASH");
-      res.render('analise-final', { sender: sender , receiver: receiver });
+      const title = "Receber";
+      res.render('analise-final', { sender: sender , receiver: receiver , title: title });
 
     }
     else { 
       //console.log("NÃO TEM");
-      res.render('analise-erro');
+      const title = "Erro";
+      res.render('analise-erro', {title: title});
 
     }
   }
@@ -46,7 +48,8 @@ function showData(result, dado, res) {
               //console.log(result[data]['hash']) //imprime hash
               var hash = result[data]['hash'];
               //res.redirect("/teste");
-              res.render('gerar-imagem', { hash: hash});
+              const title = "Enviar"
+              res.render('gerar-imagem', { hash: hash , title: title });
             }
           
       }

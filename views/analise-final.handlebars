@@ -1,8 +1,12 @@
-<h1>Deu certo</h1>
-<h2>De : {{sender}} </h2>
-<h2>Para : {{receiver}}</h2>
 <br><br>
-<button onclick="receber()">Receber</button>
+<div class="col-md-4 text-left dePara"> 
+	<h3>de: {{sender}} </h3>
+	<h3>para: {{receiver}}</h3>
+</div>
+<br>
+<div class="col-md-4 text-center"> 
+	<button class="btn buttonM" onclick="receber()">receber</button>
+</div>
 
 <script type="text/javascript">
 	function receber() {

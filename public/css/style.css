@@ -1,0 +1,37 @@
+
+input[type="file"] {
+    display: none;
+}
+
+body {
+	background: #000;
+	color: #fff;
+	font-family: 'Roboto Mono', monospace;
+}
+
+.buttonM {
+	background: #FFA500;
+	font-size: 13pt;
+	margin-top: 3em;
+	color: #fff;
+}
+
+.buttonS {
+	background: #FFA500;
+	font-size: 11pt;
+	color: #fff;
+}
+
+.hyphenate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  margin-top: 2em; 
+}
+  .dePara {
+  	background-image: url(/images/barra.svg);
+  	background-repeat: no-repeat;
+  	padding-left: 2em;
+  }

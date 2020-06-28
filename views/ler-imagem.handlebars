@@ -1,20 +1,29 @@
-<h1>Ler Imagem</h1>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="/js/piexif.js"></script>
 <br><br>
-<p>Choose a JPEG:</p> <input id="f" type="file" name="jpg" size="30" accept="image/jpeg" />
+
+<div class="col-md-4 text-center">  
+    <label class="btn buttonS">
+        <input id="f"  type="file" name="jpeg" accept="image/jpeg"/>
+        carregar
+    </label>
+</div>
+
 <br>
 
 <div id="message"></div>
 
 <div id="output">
-<img id=imageid src=""  alt="Image preview...">
+<img id=imageid class="img-responsive center-block" src=""  />
 </div>
 <br>
 <form action="/verificar-imagem" method="get">
-  <label>HASH</label>
-  <input id="hashfield" name="hash" value="Hello World" readonly>
-  <button>Verificar</button>
+  <label>hash:</label>
+  <input id="hashfield" style="background-color: #000; border: none; width: 100%" name="hash" value="00000000000000000000000000000" readonly>
+  <br>
+   <div class="col-md-4 text-center"> 
+        <button class="btn buttonM">Verificar</button>
+    </div>
 </form>
 
 <script>

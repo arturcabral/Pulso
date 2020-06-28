@@ -30,20 +30,25 @@ app.engine('handlebars', handlebars({defaultLayout: 'main'}))
 
 
 router.get('/',function(req,res){
-    res.render('index');
+    const title = "Pulso";
+    res.render('index', {title: title});
 });
 
 router.get('/ler-imagem',function(req,res){
-  res.render('ler-imagem');
+  const title = "Receber";
+  res.render('ler-imagem', {title: title});
 });
 
 router.get('/teste',function(req,res){
-  res.render('analise-final');
+  var sender = "Artur";
+  var receiver = "Tainá";
+  res.render('analise-final', { sender: sender , receiver: receiver });
 });
 
 //Rota formulário
 router.get('/form',function(req,res){
-  res.render('formulario');
+const title = "Enviar";
+res.render('formulario', {title: title});
 });
 
 //Roda Verificar Imagem
@@ -74,7 +79,8 @@ router.get('/add',  function(req,res){
   }
   else {
   	console.log("Erro");
-  	res.render('error');
+  	const title = "Erro";
+    res.render('error', {title: title});
   }
 });
 
