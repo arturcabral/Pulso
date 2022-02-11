@@ -15,7 +15,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-handlebars": "^4.0.4",
+    "express-handlebars": "^5.3.1",
     "handlebars": "^4.7.6",
     "node-fetch": "^2.6.0",
     "piexifjs": "^1.0.4"
